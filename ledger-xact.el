@@ -170,7 +170,7 @@ MOMENT is an encoded date"
 (defun ledger-delete-current-transaction (pos)
   "Delete the transaction surrounging POS."
   (interactive "d")
-  (let ((bounds (ledger-navigate-find-xact-extents pos)))
+  (let ((bounds (ledger-navigate-find-element-extents pos)))
     (delete-region (car bounds) (cadr bounds)))
   (delete-blank-lines))
 
